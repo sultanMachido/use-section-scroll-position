@@ -1,0 +1,28 @@
+{
+  "name": "use-section-scroll-position",
+  "version": "1.0.0",
+  "description": "This is a custom react hook that returns the section of a page the scroll bar is at. The hook accepts an array of ids and returns the id at the current scroll bar position.",
+  "main": "use-section-scroll-position.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sultanMachido/use-section-scroll-position.git"
+  },
+  "keywords": [
+    "react",
+    "scroll"
+  ],
+  "author": "Adesina Opeoluwa Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sultanMachido/use-section-scroll-position/issues"
+  },
+  "homepage": "https://github.com/sultanMachido/use-section-scroll-position#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2"
+  }
+}

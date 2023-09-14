@@ -11,9 +11,7 @@ export const useScrollPosition = (sectionIds: string[]) => {
 
     return "";
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
+  const scrollHandler = () => {
       const ids = sectionIds.map((id) => {
         return getScrollPosition(id);
       });
@@ -25,14 +23,12 @@ export const useScrollPosition = (sectionIds: string[]) => {
           setScrollPosition(`#${sectionId[0]}`);
         }
       }
-    });
+    }
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler );
 
     return () => {
-      window.removeEventListener("scroll", (e) => {
-        sectionIds.forEach((id) => {
-          getScrollPosition(id);
-        });
-      });
+      window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
   return { scrollPosition };
